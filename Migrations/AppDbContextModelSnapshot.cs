@@ -3,9 +3,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Paginacao.Data;
+using paginations_data.Data;
 
-namespace Paginacao.Migrations
+namespace paginations_data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -14,9 +14,9 @@ namespace Paginacao.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.11");
+                .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("Paginacao.Models.Todo", b =>
+            modelBuilder.Entity("paginations_data.Models.Todo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

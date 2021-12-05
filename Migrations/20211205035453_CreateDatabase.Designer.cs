@@ -4,21 +4,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Paginacao.Data;
+using paginations_data.Data;
 
-namespace Paginacao.Migrations
+namespace paginations_data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211027004612_CreateDatabase")]
+    [Migration("20211205035453_CreateDatabase")]
     partial class CreateDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.11");
+                .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("Paginacao.Models.Todo", b =>
+            modelBuilder.Entity("paginations_data.Models.Todo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

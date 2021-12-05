@@ -1,6 +1,5 @@
 using System;
-
-namespace Paginacao.Models
+namespace paginations_data.Models
 {
     public class Todo
     {

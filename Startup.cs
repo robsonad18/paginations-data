@@ -11,9 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Paginacao.Data;
+using paginations_data.Data;
 
-namespace Paginacao
+namespace paginations_data
 {
     public class Startup
     {
@@ -24,26 +24,24 @@ namespace Paginacao
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Paginacao", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "paginations_data", Version = "v1" });
             });
             services.AddDbContext<AppDbContext>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Paginacao v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "paginations_data v1"));
             }
 
             app.UseHttpsRedirection();

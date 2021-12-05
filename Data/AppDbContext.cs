@@ -1,15 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using Paginacao.Models;
+using paginations_data.Models;
 
-namespace Paginacao.Data
+namespace paginations_data.Data
 {
-   public class AppDbContext: DbContext
-   {
-      public DbSet<Todo> Todos {get;set;}
+    public class AppDbContext: DbContext
+    {
+        public DbSet<Todo> Todos {get;set;}
 
-      protected override void OnConfiguring(
-         DbContextOptionsBuilder optionsBuilder
-      ) => optionsBuilder.UseSqlite(connectionString:"DataSource=app.db;Cache=Shared");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite(connectionString:"DataSource=app.db;Cache=Shared");
 
-   }
+    }
 }

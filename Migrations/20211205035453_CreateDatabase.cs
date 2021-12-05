@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Paginacao.Migrations
+namespace paginations_data.Migrations
 {
     public partial class CreateDatabase : Migration
     {
